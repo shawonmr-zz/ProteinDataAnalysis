@@ -17,7 +17,7 @@ Protein::~Protein(void)
 {
 }
 
-
+/*This function reads the input file and collects protein ids*/
 void Protein::Get_Protein_ID(list<Protein> &protein_id)
 {
 
