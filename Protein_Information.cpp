@@ -26,7 +26,7 @@ Protein_Information::~Protein_Information(void)
 }
 
 
-
+/*This function trverses peptide maps to find out common H/L ratio belong to the peptide*/
 void Protein_Information::Traverse_Map(std::multimap<string,double> &r_peptide_list, std::list<double> &r)
 {
 
@@ -51,7 +51,7 @@ void Protein_Information::Traverse_Map(std::multimap<string,double> &r_peptide_l
 
 }
 
-
+/*This function calculates median to a given list*/
 double Protein_Information :: Cal_Median_One(list<double> &r1)
 {
 
@@ -193,7 +193,7 @@ void Protein_Information :: Cal_Median(list<double> &r1, list<double> &r2, list<
   
 }
 
-
+/*This function calculates protein half-life while using lists of protien and protein information classes*/
 void Protein_Information::Calculate_Protein_Ratio(list<Protein> &p, list<Protein_Information> &pi)
 {
 	ofstream out,out2;
@@ -406,7 +406,8 @@ void Protein_Information::Calculate_Protein_Ratio(list<Protein> &p, list<Protein
 	//out2.close();
 }
 
-
+/*This function calculates protein half-life while using protein and protein information classes
+with the evidence information from the input file*/
 void Protein_Information::Calculate_Protein_Ratio_With_Evidence(list<Protein> &p, list<Protein_Information> &pi)
 {
 
@@ -595,7 +596,7 @@ void Protein_Information::Calculate_Protein_Ratio_With_Evidence(list<Protein> &p
 }
 
 
-
+/*Calculates protein half-life while using peptide ratio*/
 void Protein_Information::Calculate_Protein_Ratio_With_Evidence_Peptide_Ratio(list<Protein> &p, list<Protein_Information> &pi)
 {
 
@@ -797,7 +798,7 @@ void Protein_Information::Calculate_Protein_Ratio_With_Evidence_Peptide_Ratio(li
 }
 
 
-
+/*This function retrieves evidence information from the input file for the proteins*/
 void Protein_Information::Get_Evidence_File_Info(list<Protein_Information> &m)
 {
 
